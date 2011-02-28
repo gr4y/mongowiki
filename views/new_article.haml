@@ -1,5 +1,7 @@
 %form{:action => '/create', :method => 'POST'}
 
+	%input{:type => 'hidden', :name => 'deleted', :value => 'false'}
+	
 	%p
 		%label{:for => 'title'}= "Name"
 		%input{:type => 'text', :name => 'title', :size => '133'}
