@@ -1,0 +1,10 @@
+!!!
+%html
+	%head
+		%link{:rel=>'stylesheet', :href=>'/stylesheet.css', :type => "text/css"}
+	%body
+		#navigation
+			%a{:href => "/new"}= "new article"
+			%a{:href => "/list"}= "list articles"
+		#content
+			=yield

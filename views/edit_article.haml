@@ -1,0 +1,13 @@
+%form{:action => "/update/#{@article._id}", :method => 'POST'}
+
+	%p
+		%label{:for => 'title'}= "Name"
+		%input{:type => 'text', :name => 'title', :size => '133', :value => @article.title}
+	
+	%p
+		%label{:for => 'text'}= "Text"
+		%textarea{:rows => '30', :cols => '100', :name => 'text'}= @article.text
+	
+	%p
+		%label=""
+		%input{:type => 'submit', :value => "save"}

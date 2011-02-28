@@ -1,0 +1,15 @@
+%div.article{:id => @article._id}
+	%h2#title
+		=@article.title
+
+	%div#text
+		=@article.text
+	
+	%div#urls
+		%a{:href => "/edit/#{@article._id}"}= "edit article"
+		
+		- if !@article.deleted
+			%a{:href => "/delete/#{@article._id}"}= "delete article"
+		
+		- if @article.deleted
+			%a{:href => "/undelete/#{@article._id}"}= "undo deletion"
