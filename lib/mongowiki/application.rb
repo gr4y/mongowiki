@@ -1,7 +1,6 @@
 require 'mongowiki/models/article'
 require 'haml'
 require 'sass'
-require 'coffee-script'
 
 module MongoWiki
   class Application < Sinatra::Base
