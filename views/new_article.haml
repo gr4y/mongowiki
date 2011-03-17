@@ -3,13 +3,10 @@
 	%input{:type => 'hidden', :name => 'deleted', :value => 'false'}
 	
 	%p
-		%label{:for => 'title'}= "Name"
 		%input{:type => 'text', :name => 'title', :size => '133'}
 	
 	%p
-		%label{:for => 'text'}= "Text"
 		%textarea{:rows => '30', :cols => '100', :name => 'text'}
 	
 	%p
-		%label{:for => 'submit'}=""
 		%input{:type => 'submit', :value => 'create article'}
