@@ -1,18 +1,20 @@
 require 'mongowiki/models/article'
 require 'haml'
 require 'sass'
+require 'coffee-script'
 
 module MongoWiki
   class Application < Sinatra::Base
     use MongoWiki::Database
     
     set :views, File.join('views')
+    set :public, File.join('public')
     set :haml, { :format => :html5 } 
     
     get '/stylesheet.css' do
       sass :stylesheet
     end
-  
+    
     get '/' do 
       redirect '/list'
     end
