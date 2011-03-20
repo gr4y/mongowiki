@@ -1,7 +1,4 @@
-- if @articles.count >= 1
-	%ul.articles
-		- @articles.each do |article|
-			%li.article 
-				%a{:href => "show/#{article._id}"}= article.title				
-- else 
-	#message= "there are no articles yet"
+%ul.articles
+	- @articles.each do |article|
+		%li.article
+			%a{:href => "show/#{article._id}"}= article.title				

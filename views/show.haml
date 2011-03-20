@@ -13,3 +13,5 @@
 		
 		- if @article.deleted
 			%a{:href => "/undelete/#{@article._id}"}= "undo deletion"
+			
+		%a{:href => "/destroy/#{@article._id}"}= "destroy article"
