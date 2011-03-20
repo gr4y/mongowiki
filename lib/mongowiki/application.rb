@@ -19,18 +19,24 @@ module MongoWiki
     end
   
     get '/list' do
-      if params[:show_deleted]
-        conditions = {:deleted => true}
-      else
-        conditions = {:deleted => false}        
-      end
+      conditions = {:deleted => params[:deleted] ? true : false}
       @articles = Article.all(:conditions => conditions)
-      haml :list
+      if @articles.count >= 1
+        haml :list
+      else
+        @message = "There are no articles yet!"
+        haml :error
+      end
     end
     
     get '/show/:id' do 
-      @article = Article.find(params[:id])
-      haml :show
+      begin
+        @article = Article.find(params[:id])
+        haml :show
+      rescue Mongoid::Errors::DocumentNotFound
+        @message = "Article with id #{params[:id]} doesn't exist"
+        haml :error
+      end
     end
     
     get '/new' do 
@@ -71,6 +77,13 @@ module MongoWiki
       @article.update_attributes(:deleted => false)
       if @article.save
         redirect "/show/#{@article._id}"
+      end
+    end
+    
+    get '/destroy/:id' do
+      @article = Article.find(params[:id])
+      if @article.delete
+        redirect "/list"
       end
     end
   end
