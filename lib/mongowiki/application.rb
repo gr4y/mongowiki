@@ -18,9 +18,18 @@ module MongoWiki
       redirect '/list'
     end
   
+    get '/history' do 
+      @articles = Article.all(:conditions => {:deleted => true})
+      if @articles.count >= 1
+        haml :list
+      else 
+        @message = "There are no deleted articles yet!"
+        haml :error
+      end
+    end
+    
     get '/list' do
-      conditions = {:deleted => params[:deleted] ? true : false}
-      @articles = Article.all(:conditions => conditions)
+      @articles = Article.all(:conditions => {:deleted => false})
       if @articles.count >= 1
         haml :list
       else
