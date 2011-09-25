@@ -9,7 +9,7 @@ module MongoWiki
     set :views, File.join('views')
     set :public, File.join('public')
     set :haml, { :format => :html5 } 
-    
+        
     get '/stylesheet.css' do
       sass :stylesheet
     end
@@ -40,10 +40,10 @@ module MongoWiki
     
     get '/show/:id' do 
       begin
-        @article = Article.find(params[:id])
+        @article = Article.find params[:id]
         haml :show
-      rescue Mongoid::Errors::DocumentNotFound
-        @message = "Article with id #{params[:id]} doesn't exist"
+      rescue Mongoid::Errors::DocumentNotFound => e
+        @error = e
         haml :error
       end
     end

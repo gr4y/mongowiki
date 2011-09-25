@@ -1,1 +1,11 @@
-%div{:class => "error"}= @message
+%div{:class => "error"}
+	%h3= "Error Message"
+	%div{:class => 'message'}
+		- if @error
+			= @error.message
+		- if @message
+			= @message
+			
+	- if @error
+		%h3= "Backtrace"
+		%code{:class => 'backtrace'}= @error.backtrace.join('<br/>')
