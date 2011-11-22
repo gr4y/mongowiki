@@ -1,18 +1,13 @@
 require 'mongowiki/models/article'
-require 'haml'
-require 'sass'
+require 'sprockets'
+require 'erb'
 
 module MongoWiki
   class Application < Sinatra::Base
     use MongoWiki::Database
 
     set :views, File.join('views')
-    set :public_folder, File.join('public')
         
-    get '/stylesheet.css' do
-      sass :stylesheet
-    end
-    
     get '/' do 
       redirect '/list'
     end
@@ -20,36 +15,36 @@ module MongoWiki
     get '/history' do 
       @articles = Article.all(:conditions => {:deleted => true})
       if @articles.count >= 1
-        haml :list
+        erb :list
       else 
         @message = "There are no deleted articles yet!"
-        haml :error
+        erb :error
       end
     end
     
     get '/list' do
       @articles = Article.all(:conditions => {:deleted => false})
       if @articles.count >= 1
-        haml :list
+        erb :list
       else
         @message = "There are no articles yet!"
-        haml :error
+        erb :error
       end
     end
     
     get '/show/:id' do 
       begin
         @article = Article.find params[:id]
-        haml :show
+        erb :show
       rescue Mongoid::Errors::DocumentNotFound => e
         @error = e
-        haml :error
+        erb :error
       end
     end
     
     get '/new' do 
       @article = Article.new
-      haml :new_article
+      erb :new_article
     end
     
     post '/create' do       
@@ -61,7 +56,7 @@ module MongoWiki
 
     get '/edit/:id' do 
       @article = Article.find(params[:id])
-      haml :edit_article
+      erb :edit_article
     end
     
     post '/update/:id' do

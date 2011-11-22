@@ -1,0 +1,18 @@
+<div class="article" id="<%= @article._id %>">
+	<h2 id="title">
+		<%= @article.title %>
+	</h2>
+	<div id="text">
+		<%= @article.text %>
+	</div>
+	<div id="urls">
+		<a href="/edit/#{@article._id}">edit article</a>
+		<% if !@article.deleted %>
+			<a href="/delete/<%= @article._id %>">delete article</a>
+		<% end %>
+		<% if @article.deleted %>
+			<a href="/undelete/<%= @article._id %>">undo deletion</a>
+		<% end %>
+		<a href="/destroy/<%= @article._id %>">destroy article</a>
+	</div>
+</div>

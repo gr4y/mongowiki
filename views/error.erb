@@ -1,0 +1,16 @@
+<div class="error">
+	<h3>Error Message</h3>
+	<div class="message">
+		<% if @error %>
+			<%= @error.message %>
+			<h3>Backtrace</h3>
+			<code class="backtrace">
+				<%= @error.backtrace.join("<br/>") %>
+			</code>
+		<% end %>
+
+		<% if @message %>
+			<%= @message %>
+		<% end %>
+	</div>
+</div>
