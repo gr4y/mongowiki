@@ -5,10 +5,9 @@ require 'sass'
 module MongoWiki
   class Application < Sinatra::Base
     use MongoWiki::Database
-    
+
     set :views, File.join('views')
-    set :public, File.join('public')
-    set :haml, { :format => :html5 } 
+    set :public_folder, File.join('public')
         
     get '/stylesheet.css' do
       sass :stylesheet
