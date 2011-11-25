@@ -6,7 +6,7 @@
 		<%= @article.text %>
 	</div>
 	<div id="urls">
-		<a href="/edit/#{@article._id}">edit article</a>
+		<a href="/edit/<%= @article._id %>">edit article</a>
 		<% if !@article.deleted %>
 			<a href="/delete/<%= @article._id %>">delete article</a>
 		<% end %>
