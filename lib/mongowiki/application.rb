@@ -1,13 +1,19 @@
 require 'mongowiki/models/article'
-require 'sprockets'
+require 'sinatra'
 require 'erb'
 
 module MongoWiki
   class Application < Sinatra::Base
-    use MongoWiki::Database
-
-    set :views, File.join('views')
         
+    configure do 
+      config = ::YAML::load_file('config.yml')
+      ::Mongoid::configure do |c|
+        c.master = ::Mongo::Connection.new(config['host']).db(config['database'])
+      end
+    end
+      
+    set :views, File.join('views')
+         
     get '/' do 
       redirect '/list'
     end
