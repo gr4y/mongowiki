@@ -39,7 +39,7 @@ module MongoWiki
     
     get '/show/:id' do 
       begin
-        @article = Article.find params[:id]
+        @article = Article.find(params[:id])
         erb :show
       rescue Mongoid::Errors::DocumentNotFound => e
         @error = e
