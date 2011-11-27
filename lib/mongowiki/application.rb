@@ -1,19 +1,18 @@
-require 'mongowiki/models/article'
 require 'sinatra'
+require 'sinatra-mongoid-config'
+require 'mongowiki/models/article'
+require 'sass'
 require 'erb'
 
 module MongoWiki
   class Application < Sinatra::Base
-        
-    configure do 
-      config = ::YAML::load_file('config.yml')
-      ::Mongoid::configure do |c|
-        c.master = ::Mongo::Connection.new(config['host']).db(config['database'])
-      end
+    
+    configure do   
+      set :views, File.join('views')
+      set :show_exceptions, false
+      set :logging, true
     end
-      
-    set :views, File.join('views')
-         
+    
     get '/' do 
       redirect '/list'
     end
