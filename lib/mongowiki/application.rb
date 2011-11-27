@@ -8,7 +8,7 @@ module MongoWiki
   class Application < Sinatra::Base
     
     configure do   
-      set :views, File.join('views')
+      set :views, File.join(File.dirname(__FILE__), 'views')
       set :show_exceptions, false
       set :logging, true
     end

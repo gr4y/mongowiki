@@ -6,8 +6,8 @@ module MongoWiki
     
     def initialize 
       super
-      self.append_path 'assets/javascripts'
-      self.append_path 'assets/stylesheets'
+      self.append_path File.join(File.dirname(__FILE__), 'assets/javascripts')
+      self.append_path File.join(File.dirname(__FILE__), 'assets/stylesheets')
       # leaving this here for debugging 
       # self.logger = Logger.new(STDOUT)
     end
