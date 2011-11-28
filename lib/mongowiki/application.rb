@@ -1,6 +1,7 @@
 require 'sinatra'
 require 'sinatra-mongoid-config'
 require 'mongowiki/models/article'
+require 'redcarpet'
 require 'sass'
 require 'erb'
 
