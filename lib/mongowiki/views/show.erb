@@ -3,7 +3,7 @@
 		<%= @article.title %>
 	</h2>
 	<div id="text">
-		<%= @article.text %>
+		<%= Redcarpet.new(@article.text).to_html %>
 	</div>
 	<div id="urls">
 		<a href="/edit/<%= @article._id %>">edit article</a>
