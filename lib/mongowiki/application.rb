@@ -19,7 +19,7 @@ module MongoWiki
     end
   
     get '/history' do 
-      @articles = Article.all(:conditions => {:deleted => true})
+      @articles = Article.deleted
       if @articles.count >= 1
         erb :list
       else 
@@ -29,7 +29,7 @@ module MongoWiki
     end
     
     get '/list' do
-      @articles = Article.all(:conditions => {:deleted => false})
+      @articles = Article.list
       if @articles.count >= 1
         erb :list
       else
