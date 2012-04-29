@@ -30,10 +30,12 @@ Gem::Specification.new do |s|
   s.add_dependency 'rack-cache', '~> 1.1.0'
   s.add_dependency 'sinatra', '~> 1.3.2'
   s.add_dependency 'sinatra-contrib', '~> 1.3.1'
-  s.add_runtime_dependency "activesupport", "~> 3.2.0"
+  s.add_runtime_dependency 'activesupport', '~> 3.2.0'
+  s.add_runtime_dependency 'yajl-ruby', '~> 1.1.0'
   
   # database 
   s.add_runtime_dependency "mongoid", "~> 2.4"
+  s.add_runtime_dependency "mongoid_search", "~> 0.2.7"
   s.add_runtime_dependency "bson_ext", "~> 1.5"
   
   # frontend / assets
@@ -41,6 +43,6 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency "sprockets", "~> 2.1.2"
   s.add_runtime_dependency "sprockets-helpers", "~> 0.3.0"
   s.add_runtime_dependency "sass", "~> 3.1.10"
-  
+  s.add_runtime_dependency "rabl", "~> 0.6.10"  
 
 end

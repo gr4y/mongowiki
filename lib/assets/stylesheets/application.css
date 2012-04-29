@@ -1,1 +1,36 @@
-//= require_tree 
+//= require reset
+//= require_tree .
+//= require_self
+
+/*** FLOAT ***/
+.left { 
+	float: left; 
+}
+
+.right { 
+	float: right; 
+	text-align: left;
+}
+
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: '.';
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  font-size: 0;
+  line-height: 0;
+  width: 0;
+  height: 0;
+}
+
+.clearfix:after { clear: both; }

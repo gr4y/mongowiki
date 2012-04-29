@@ -1,13 +1,11 @@
-require 'mongoid'
-
 class Article
+  
   include Mongoid::Document
+  include Mongoid::Search
   
   field :title, :type => String
   field :text
-  field :deleted, :type => Boolean
 
-  scope :deleted, where(deleted: true).order_by(:title, :desc)
-  scope :list, where(deleted: false).order_by(:title, :desc)
+  search_in :title, :text
 
 end

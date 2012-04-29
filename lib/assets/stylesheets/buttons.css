@@ -1,0 +1,91 @@
+.button {
+	display: inline-block;
+
+	border-radius: 5px;
+	-o-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+
+	color: #FFF;
+	text-decoration: none;
+	text-shadow: #000 1px 1px 0.2em;
+
+	font-weight: bold;
+	font-size: 12px;	
+	padding: 10px;
+	background-image: linear-gradient(bottom, rgb(187,177,177) 1%, rgb(217,212,212) 100%);
+	background-image: -o-linear-gradient(bottom, rgb(187,177,177) 1%, rgb(217,212,212) 100%);
+	background-image: -moz-linear-gradient(bottom, rgb(187,177,177) 1%, rgb(217,212,212) 100%);
+	background-image: -webkit-linear-gradient(bottom, rgb(187,177,177) 1%, rgb(217,212,212) 100%);
+	background-image: -ms-linear-gradient(bottom, rgb(187,177,177) 1%, rgb(217,212,212) 100%);
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.01, rgb(187,177,177)),
+		color-stop(1, rgb(217,212,212))
+	);
+	
+	border-top: none;
+	border-left: 1px solid rgb(187,177,177);
+	border-right: 1px solid rgb(187,177,177);
+	border-bottom: 1px solid rgb(187,177,177);	
+	
+}
+
+.button.red {
+	background-image: linear-gradient(bottom, rgb(170,11,0) 1%, rgb(221,14,0) 100%);
+	background-image: -o-linear-gradient(bottom, rgb(170,11,0) 1%, rgb(221,14,0) 100%);
+	background-image: -moz-linear-gradient(bottom, rgb(170,11,0) 1%, rgb(221,14,0) 100%);
+	background-image: -webkit-linear-gradient(bottom, rgb(170,11,0) 1%, rgb(221,14,0) 100%);
+	background-image: -ms-linear-gradient(bottom, rgb(170,11,0) 1%, rgb(221,14,0) 100%);
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.01, rgb(170,11,0)),
+		color-stop(1, rgb(221,14,0))
+	);
+	
+	border-top: none;
+	border-left: 1px solid rgb(144,9,0);
+	border-right: 1px solid rgb(144,9,0);
+	border-bottom: 1px solid rgb(144,9,0);	
+}
+
+.button.blue {
+	#900
+	background-image: linear-gradient(bottom, rgb(33,150,204) 1%, rgb(103,200,235) 100%);
+	background-image: -o-linear-gradient(bottom, rgb(33,150,204) 1%, rgb(103,200,235) 100%);
+	background-image: -moz-linear-gradient(bottom, rgb(33,150,204) 1%, rgb(103,200,235) 100%);
+	background-image: -webkit-linear-gradient(bottom, rgb(33,150,204) 1%, rgb(103,200,235) 100%);
+	background-image: -ms-linear-gradient(bottom, rgb(33,150,204) 1%, rgb(103,200,235) 100%);
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.01, rgb(33,150,204)),
+		color-stop(1, rgb(103,200,235))
+	);
+	
+	border-top: none;
+	border-left: 1px solid #0080FF;
+	border-right: 1px solid #0080FF;
+	border-bottom: 1px solid #579CDC;
+}
+
+.button.blue:hover {
+	background-image: linear-gradient(bottom, rgb(33,150,204) 100%, rgb(103,200,235) 1%);
+	background-image: -o-linear-gradient(bottom, rgb(33,150,204) 100%, rgb(103,200,235) 1%);
+	background-image: -moz-linear-gradient(bottom, rgb(33,150,204) 100%, rgb(103,200,235) 1%);
+	background-image: -webkit-linear-gradient(bottom, rgb(33,150,204) 100%, rgb(103,200,235) 1%);
+	background-image: -ms-linear-gradient(bottom, rgb(33,150,204) 100%, rgb(103,200,235) 1%);
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(1, rgb(33,150,204)),
+		color-stop(0.01, rgb(103,200,235))
+	);
+	
+}
