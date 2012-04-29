@@ -1,0 +1,17 @@
+.error {
+	padding: 10px;
+}
+
+.error .title {
+	color: #800001;	
+}
+
+.error .message {
+	font-size: 15px;
+}
+
+.error .backtrace {
+	background-color: #B9B9B9;
+	font-family: "Monaco", "Myriad Pro", serif;
+	font-size: 12px;
+}

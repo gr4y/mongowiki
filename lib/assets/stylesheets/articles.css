@@ -1,0 +1,29 @@
+.article .title {
+	margin: 15px 0;
+	font-size: 20px;
+	font-weight: bold;
+}
+		
+.article .text {
+	padding: 5px 10px 10px 10px;
+	margin: 10px 0;
+	font-family: "Helvetica Neue", Helvetica, serif;
+	font-size: 16px;
+	padding: 0;
+}
+
+.article .text p {
+	margin: 10px 0;
+}
+
+.article .text a {
+	color: #000
+}
+
+.article .text a:hover {
+	color: #666
+}
+
+.article .actions {
+	margin-top: 30px;
+}
