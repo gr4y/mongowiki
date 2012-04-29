@@ -1,11 +1,11 @@
 <div class="article" id="<%= @article._id %>">
-	<h1 id="title">
+	<h1 class="title">
 		<%= @article.title %>
 	</h1>
-	<div id="text">
+	<div class="text">
 		<%= markdown(@article.text) %>
 	</div>
-	<div id="actions">
+	<div class="actions">
 		<a href="<%= url("/edit/#{@article._id}") %>" class="button">edit article</a>
 		<a href="<%= url("/destroy/#{@article._id}") %>" class="button red">destroy article</a>
 	</div>
