@@ -1,18 +1,28 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link rel="stylesheet" href="<%= stylesheet_path "application" %>">
-		<script src="<%= javascript_path "application" %>"></script>
+		<link rel="stylesheet" href="<%= stylesheet_path('application') %>">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script src="<%= javascript_path('application') %>"></script>
 		<title>MongoWiki</title>
 	</head>
 	<body>
-		<div id="navigation">
-			<a href="/new">new article</a>
-			<a href="/list">list articles</a>
-			<a href="/history">history</a>
-		</div>
-		<div id="content">
-			<%= yield %>
+		
+		<div id="wrapper">
+			
+			<section id="main-bar" class="clearfix">
+				<nav id="navigation" role="navigation" class="left">
+					<a href="/new" class="button blue">create new article</a>
+				</nav>
+				<div id="search" role="search" class="left">
+					<input type="text" name="query" class="query"/>
+				</div>
+			</section>
+			
+			<section id="content" role="content">
+				<%= yield %>
+			</section>
+
 		</div>
 	</body>
 </html>

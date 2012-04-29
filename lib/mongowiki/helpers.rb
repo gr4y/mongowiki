@@ -1,0 +1,1 @@
+require 'mongowiki/helpers/markdown_helper'

@@ -3,21 +3,15 @@ module MongoWiki
     extend ActiveSupport::Concern
   
     included do 
+          
+      get '/' do
+        redirect url("/list")
+      end   
       
-      get '/history' do 
-        @articles = Article.deleted
-        if @articles.count >= 1
-          erb :list
-        else 
-          @message = "There are no deleted articles yet!"
-          erb :error
-        end
-      end
-    
       get '/list' do
-        @articles = Article.list
+        @articles = Article.all
         if @articles.count >= 1
-          erb :list
+          erb :'article/list'
         else
           @message = "There are no articles yet!"
           erb :error
@@ -27,7 +21,7 @@ module MongoWiki
       get '/show/:id' do 
         begin
           @article = Article.find(params[:id])
-          erb :show
+          erb :'article/show'
         rescue Mongoid::Errors::DocumentNotFound => e
           @error = e
           erb :error
@@ -36,51 +30,36 @@ module MongoWiki
     
       get '/new' do 
         @article = Article.new
-        erb :new_article
+        erb :'article/new'
       end
     
       post '/create' do       
         if params[:title] && params[:text]
           @article = Article.create(params)
-          redirect "/show/#{@article._id}"
+          redirect url("show/#{@article._id}")
         end
       end    
 
       get '/edit/:id' do 
         @article = Article.find(params[:id])
-        erb :edit_article
+        erb :'article/edit'
       end
     
       post '/update/:id' do
         @article = Article.find(params[:id])
         @article.update_attributes(params)
         if @article.save
-          redirect "/show/#{@article._id}"
+          redirect url("/show/#{@article._id}")
         end
       end
-    
-      get '/delete/:id' do
-        @article = Article.find(params[:id])
-        @article.update_attributes(:deleted => true)
-        if @article.save
-          redirect "/list"
-        end
-      end
-    
-      get '/undelete/:id' do
-        @article = Article.find(params[:id])
-        @article.update_attributes(:deleted => false)
-        if @article.save
-          redirect "/show/#{@article._id}"
-        end
-      end
-    
+          
       get '/destroy/:id' do
         @article = Article.find(params[:id])
         if @article.delete
-          redirect "/list"
+          redirect url("/list")
         end
       end
+      
     end
   end
 end
