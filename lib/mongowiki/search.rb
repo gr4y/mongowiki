@@ -21,9 +21,7 @@ module MongoWiki
   
       def search!
         query = params[:query]
-        puts "search query: #{query}"
         @articles = Article.search(query)
-        puts "response: " + @articles.inspect
         @articles
       end
     
