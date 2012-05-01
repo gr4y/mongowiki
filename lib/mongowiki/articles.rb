@@ -34,10 +34,12 @@ module MongoWiki
       end
     
       post '/create' do       
-        if params[:article]
-          @article = Article.create(params[:article])
-          redirect url("/show/#{@article._id}")
+        article = params[:article]
+        @article = Article.create(params[:article])
+        if !@article.valid?
+          redirect url("/new")
         end
+        redirect url("/show/#{@article._id}")
       end    
 
       get '/edit/:id' do 
