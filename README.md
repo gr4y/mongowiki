@@ -10,18 +10,10 @@ Installation
 	
 create a *config.ru* file somewhere on your filesystem, which is in my case */var/apps/mongowiki*
 
-	ENV['MONGO_HOST'] = "server"
-	ENV['MONGO_DB'] = "mongowiki"
-
+	ENV['MONGO_URL'] = "mongodb://SERVER:27017/database"
+	
 	require 'mongowiki'
-
-	map '/assets' do
-  	run MongoWiki::Assets.new
-	end
-
-	map '/' do
-  	run MongoWiki::Application.new
-	end	
+	run MongoWiki.run!
 	
 depending on how your mongodb server is configured, you need to set the corresponding environment variables.
 	
@@ -30,20 +22,8 @@ Environment variables
 
 You can set all this variables in your **config.ru**
 
-**MONGO_HOST**
-the host where mongodb is installed (defaults to: **localhost**)
-
-**MONGO_PORT**
-the port where the mongodb server is listening (defaults to: **27017**)
-
-**MONGO_DB**
-the database name of the mongowiki db
-
-**MONGO_USER**
-the username 
-
-**MONGO_PASSWORD**
-the password 
+**MONGO_URL**
+URI to the MongoDB instance. For example: mongodb://username:passwort@server:27017/database
 
 Contribution
 ------------
