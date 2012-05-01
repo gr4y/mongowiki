@@ -33,6 +33,21 @@
 	
 }
 
+.button:hover {
+	background-image: linear-gradient(bottom, rgb(187,177,177) 100%, rgb(217,212,212) 1%);
+	background-image: -o-linear-gradient(bottom, rgb(187,177,177) 100%, rgb(217,212,212) 1%);
+	background-image: -moz-linear-gradient(bottom, rgb(187,177,177) 100%, rgb(217,212,212) 1%);
+	background-image: -webkit-linear-gradient(bottom, rgb(187,177,177) 100%, rgb(217,212,212) 1%);
+	background-image: -ms-linear-gradient(bottom, rgb(187,177,177) 100%, rgb(217,212,212) 1%);
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(1, rgb(187,177,177)),
+		color-stop(0.01, rgb(217,212,212))
+	);
+}
+
 .button.red {
 	background-image: linear-gradient(bottom, rgb(170,11,0) 1%, rgb(221,14,0) 100%);
 	background-image: -o-linear-gradient(bottom, rgb(170,11,0) 1%, rgb(221,14,0) 100%);
@@ -53,8 +68,22 @@
 	border-bottom: 1px solid rgb(144,9,0);	
 }
 
+.button.red:hover {
+	background-image: linear-gradient(bottom, rgb(170,11,0) 100%, rgb(221,14,0) 1%);
+	background-image: -o-linear-gradient(bottom, rgb(170,11,0) 100%, rgb(221,14,0) 1%);
+	background-image: -moz-linear-gradient(bottom, rgb(170,11,0) 100%, rgb(221,14,0) 1%);
+	background-image: -webkit-linear-gradient(bottom, rgb(170,11,0) 100%, rgb(221,14,0) 1%);
+	background-image: -ms-linear-gradient(bottom, rgb(170,11,0) 100%, rgb(221,14,0) 1%);
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(1, rgb(170,11,0)),
+		color-stop(0.01, rgb(221,14,0))
+	);
+}
+
 .button.blue {
-	#900
 	background-image: linear-gradient(bottom, rgb(33,150,204) 1%, rgb(103,200,235) 100%);
 	background-image: -o-linear-gradient(bottom, rgb(33,150,204) 1%, rgb(103,200,235) 100%);
 	background-image: -moz-linear-gradient(bottom, rgb(33,150,204) 1%, rgb(103,200,235) 100%);
