@@ -1,13 +1,1 @@
-<form action="/update/<%= @article._id %>" method="POST">
-	<p>
-		<input type="text" name="title" size="133" value="<%= @article.title %>" />
-	</p>
-	<p>
-		<textarea rows="30" cols="100" name="text"><%= @article.text %></textarea>
-	</p>
-	<p><small>mongowiki is using the markdown format!</small></a>
-	<p>
-		<input type="submit" value"save" />
-	</p>
-</div>
-
+<%= erb :'article/form' %>

@@ -1,13 +1,1 @@
-<form action="/create" method="POST">
-	<input type="hidden" name="deleted" value="false" />
-	<p>
-		<input type="text" name="title" size="133" />
-	</p>
-	<p>
-		<textarea rows="30" cols="100" name="text"></textarea>
-	</p>
-	<p>mongowiki is using the <a href="http://daringfireball.net/projects/markdown/" title="markdown">markdown</a>!</p>
-	<p>
-		<input type="submit" value"save" />
-	</p>
-</form>
+<%= erb :'article/form' %>

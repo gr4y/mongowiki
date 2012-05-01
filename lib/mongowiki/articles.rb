@@ -34,9 +34,9 @@ module MongoWiki
       end
     
       post '/create' do       
-        if params[:title] && params[:text]
-          @article = Article.create(params)
-          redirect url("show/#{@article._id}")
+        if params[:article]
+          @article = Article.create(params[:article])
+          redirect url("/show/#{@article._id}")
         end
       end    
 
@@ -47,7 +47,7 @@ module MongoWiki
     
       post '/update/:id' do
         @article = Article.find(params[:id])
-        @article.update_attributes(params)
+        @article.update_attributes(params[:article])
         if @article.save
           redirect url("/show/#{@article._id}")
         end
