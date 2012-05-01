@@ -1,15 +1,21 @@
 .article .title {
-	margin: 15px 0;
-	font-size: 20px;
-	font-weight: bold;
+	margin: 15px 0 5px 0;
 }
-		
-.article .text {
-	padding: 5px 10px 10px 10px;
-	margin: 10px 0;
+
+.article .text,
+ul.articles {
+	padding: 10px;
+	margin: 5px 0;
 	font-family: "Helvetica Neue", Helvetica, serif;
 	font-size: 16px;
-	padding: 0;
+
+	border-radius: 5px;
+	-o-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	
+	background: rgb(240,240,240);
+	border: 1px solid #CCC;
 }
 
 .article .text p {
@@ -25,5 +31,14 @@
 }
 
 .article .actions {
-	margin-top: 30px;
+	margin-top: 20px;
+}
+
+ul.articles li.article {
+	display: block;
+	padding: 5px 0;	
+}
+
+ul.articles li.article a {
+	color: #000;
 }

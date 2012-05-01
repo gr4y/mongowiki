@@ -5,14 +5,27 @@
 body {
 	color: #000;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-	background-color: #ECECEC;
+	background-color: #DDD;
 }	
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: bold;
+}
 
 #wrapper {
 	width: 960px;
 	margin: 0 auto;
 	padding: 10px;
-	background: #DDD;
+}
+
+#wrapper #navigation {
+	width: 220px;
+}
+
+#wrapper .title {
+	font-size: 20px;
+	font-weight: bold;
+	margin: 15px 0;
 }
 
 /*** FLOAT ***/
