@@ -2,8 +2,6 @@ require "bundler/gem_tasks"
 require "rake/testtask"
 require "yard"
 
-TEST_SUITES = [ { :name => "rack", :desc => "rack tests", :pattern => "test/rack/**/*_test.rb"} ]
-
 desc "generate documentation"
 YARD::Rake::YardocTask.new do |t|
   t.files << 'lib/**/*.rb'
