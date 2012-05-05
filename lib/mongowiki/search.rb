@@ -4,7 +4,7 @@ module MongoWiki
     
     included do 
 
-      get '/search' do
+      post '/search' do
         search!
         erb :'search/articles'
       end
