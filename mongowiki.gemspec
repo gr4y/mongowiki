@@ -42,7 +42,7 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency "redcarpet", "~> 1.17.2"
   s.add_runtime_dependency "sprockets", "~> 2.1.2"
   s.add_runtime_dependency "sprockets-helpers", "~> 0.3.0"
-  s.add_runtime_dependency "sass", "~> 3.1.10"
+  s.add_runtime_dependency "sass", "~> 3.1.17"
   s.add_runtime_dependency "rabl", "~> 0.6.10"
 
 end
