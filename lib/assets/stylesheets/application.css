@@ -15,11 +15,16 @@ h1, h2, h3, h4, h5, h6 {
 #wrapper {
 	width: 960px;
 	margin: 0 auto;
-	padding: 10px;
+	padding: 0 12px;
 }
 
-#wrapper #navigation {
-	width: 220px;
+#wrapper #main-bar {
+	margin: 20px 0;
+}
+
+#navigation .list li {
+	display: inline-block;
+	margin: 0 5px 0 0;
 }
 
 #wrapper .title {

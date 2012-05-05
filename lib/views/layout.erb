@@ -7,16 +7,16 @@
 		<title>MongoWiki</title>
 	</head>
 	<body>
-		
 		<div id="wrapper">
 			
 			<section id="main-bar" class="clearfix">
 				<nav id="navigation" role="navigation" class="left">
-					<a href="<%= url('/list') %>" class="button">article list</a>
-					<a href="<%= url('/new') %>" class="button blue">create new article</a>
+					<ul class="list">
+						<li><a href="<%= url('/new') %>" class="button blue" alt="create article">create article</a></li>
+					</ul>
 				</nav>
 				<div id="search" role="search" class="left">
-					<input type="text" name="query" class="query"/>
+					<input type="text" name="query" class="query" placeholder="Search..." />
 				</div>
 			</section>
 			

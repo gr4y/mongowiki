@@ -1,10 +1,12 @@
 #search {
-	margin-left: 10px;
+	display: block;
+	margin: 0 5px 0 50px;
 }
 
 #search .query {
-	width: 718px;
-	margin: 0;
+	width: 485px;
+	margin: 0 5px;
+	padding: 5px;
 }
 
 #search .result-list {
@@ -22,8 +24,9 @@
 	-webkit-border-radius: 5px;
 	border: 1px solid #CCC;
 	
-	width: 500px;
+	width: 495px;
 	padding: 10px 0;
+	margin: 0 5px;
 }
 
 #search .result-list .result-item {
