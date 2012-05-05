@@ -8,14 +8,14 @@ YARD::Rake::YardocTask.new do |t|
 end
 
 namespace :test do 
-  Rake::TestTask.new(:rack) do |task|
+  Rake::TestTask.new(:unit) do |task|
     task.libs << "test"
-    task.test_files = FileList["test/rack/**/*_test.rb"]
+    task.test_files = FileList["test/unit/**/*_test.rb"]
   end
 end
 
 task :test do
-  Rake::Task["test:rack"].invoke
+  Rake::Task["test:unit"].invoke
 end
 
 task :default => [:test, :build, :yard]
