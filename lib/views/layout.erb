@@ -7,8 +7,7 @@
 		<title>MongoWiki</title>
 	</head>
 	<body>
-		<div id="wrapper">
-			
+		<div id="wrapper">			
 			<section id="main-bar" class="clearfix">
 				<nav id="navigation" role="navigation" class="left">
 					<ul class="list">
@@ -19,6 +18,14 @@
 					<input type="text" name="query" class="query" placeholder="Search..." />
 				</div>
 			</section>
+			
+			<ul class="messages">
+				<% messages.each do |message| %>
+					<li class="message <%= message[:type] %>">
+						<%= message[:text] %>
+					</li>
+				<% end %>
+			</ul>
 			
 			<section id="content" role="content">
 				<%= yield %>
