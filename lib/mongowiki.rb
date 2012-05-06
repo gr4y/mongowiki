@@ -10,6 +10,7 @@ require 'sass'
 require 'sprockets'
 require 'sprockets-helpers'
 require 'redcarpet'
+require 'coderay'
 
 require 'mongowiki/models/article'
 require 'mongowiki/helpers'
