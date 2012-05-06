@@ -12,6 +12,10 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: bold;
 }
 
+strong,b {
+	font-weight: bolder;
+}
+
 #wrapper {
 	width: 960px;
 	margin: 0 auto;
