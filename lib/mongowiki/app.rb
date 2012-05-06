@@ -40,7 +40,8 @@ module MongoWiki
 
     helpers do 
       include Sprockets::Helpers
-      include MongoWiki::Helpers
+      include MongoWiki::Helpers::MessageHelper
+      include MongoWiki::Helpers::MarkdownHelper
     end
 
     include Rack::Utils
