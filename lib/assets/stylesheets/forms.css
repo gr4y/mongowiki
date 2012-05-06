@@ -3,8 +3,8 @@ form {
 }
 
 form label {
-	width: 200px;
-	max-width: 200px;
+	width: 50px;
+	max-width: 50px;
 	display: inline-block;
 	padding: 10px 20px 0 0;
 	text-align: right;
@@ -14,7 +14,7 @@ form label {
 form input[type='text'],
 form input[type='search'],
 form textarea {
-	width: 700px;
+	width: 850px;
 }
 
 input[type="search"] {
