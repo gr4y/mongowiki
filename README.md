@@ -6,7 +6,15 @@ mongowiki is an sinatra-based rack-application which saves all data to an mongod
 Installation
 ------------
 
+stable release
+--------------
+
 	$ gem install mongowiki
+
+prerelease
+----------
+
+	$ gem install mongowiki --pre
 	
 create a *config.ru* file somewhere on your filesystem, which is in my case */var/apps/mongowiki*
 
