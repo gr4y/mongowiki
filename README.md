@@ -1,6 +1,8 @@
 mongowiki
 =========
 
+[![Build Status](https://secure.travis-ci.org/gr4y/mongowiki.png?branch=master)](http://travis-ci.org/gr4y/mongowiki)
+
 mongowiki is an sinatra-based rack-application which saves all data to an mongodb
 
 Installation
