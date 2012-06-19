@@ -8,8 +8,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Sascha Wessel"]
   s.email       = ["swessel@gr4yweb.de"]
   s.homepage    = "http://www.gr4yweb.de/gems/mongowiki"
-  s.summary     = %q{mongowiki is an sinatra-based rack-application which saves all data to an mongodb}
-  s.description = %q{mongowiki is based on sinatra rack app with sprockets (and sass), mongoid and erb}
+  s.summary     = %q{mongowiki is an sinatra-based wiki application, which persists your articles into an mongodb}
+  s.description = %q{mongowiki is an sinatra-based wiki application, which persists your articles into an mongodb}
 
   s.rubyforge_project = "mongowiki"
 

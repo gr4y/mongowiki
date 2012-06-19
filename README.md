@@ -1,20 +1,17 @@
-mongowiki
-=========
+# mongowiki
+
+mongowiki is an sinatra-based wiki application, which persists your articles into an mongodb
+
+## Travis CI
 
 [![Build Status](https://secure.travis-ci.org/gr4y/mongowiki.png?branch=master)](http://travis-ci.org/gr4y/mongowiki)
 
-mongowiki is an sinatra-based rack-application which saves all data to an mongodb
-
-Installation
-------------
-
-stable release
---------------
+## Installation
+### stable release
 
 	$ gem install mongowiki
 
-prerelease
-----------
+### prerelease
 
 	$ gem install mongowiki --pre
 	
@@ -24,20 +21,13 @@ create a *config.ru* file somewhere on your filesystem, which is in my case */va
 	
 	require 'mongowiki'
 	run MongoWiki.run!
-	
-depending on how your mongodb server is configured, you need to set the corresponding environment variables.
-	
-Environment variables
---------------------
 
-You can set all this variables in your **config.ru**
+#### Environment variables
 
 **MONGO_URL**
 URI to the MongoDB instance. For example: mongodb://username:passwort@server:27017/database
 
-Contribution
-------------
-
+## Contribution
 ### Patches & Pull Requests
 
 You want to add a feature or you want to patch mongowiki?
