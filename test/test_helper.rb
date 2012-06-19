@@ -1,7 +1,9 @@
 require 'minitest/autorun'
 require 'rack/test'
 require 'mongowiki'
+require 'yaml'
 
-if !ENV['MONGO_URL']
-  ENV['MONGO_URL']="mongodb://ATLANTIS/mongowiki_test"
-end 
+if !ENV['TRAVIS']
+  yaml = YAML::load_file('test/mongodb.yml')
+  ENV['MONGO_URL']=yaml['url']
+end
