@@ -1,4 +1,6 @@
 module MongoWiki
+  
+  # :nodoc:
   class App < Sinatra::Base
     
     # set paths
@@ -52,6 +54,12 @@ module MongoWiki
       erb :"404"
     end
     
+    # 
+    # indexing keywords of Article
+    # and creating an Rack::Cascade with sprockets and all includes
+    #
+    #   MongoWiki::App.run!
+    #
     def self.run!
       Article.index_keywords!
       Rack::Cascade.new([sprockets, self])

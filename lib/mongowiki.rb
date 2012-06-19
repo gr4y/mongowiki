@@ -19,16 +19,24 @@ require 'mongowiki/search'
 require 'mongowiki/app'
 
 module MongoWiki
-    
-  class << self 
   
+  # 
+  # the application
+  #
+  # usage:
+  # 
+  #   MongoWiki.run!
+  class << self 
+    
     attr_reader :mongo_uri
     
+    # set mongo_uri
     def mongo_uri=(uri)
       Mongoid::Config.from_hash("uri" => uri)
       @@mongo_uri = uri
     end
-       
+    
+    # init application
     def init!
       if mongo_uri = ENV['MONGO_URL'] 
         self.mongo_uri = mongo_uri 
@@ -36,7 +44,8 @@ module MongoWiki
         raise "environment variable MONGO_URL is not set!"
       end
     end
-       
+    
+    # run application
     def run! 
       init!
       MongoWiki::App.run!

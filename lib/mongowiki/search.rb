@@ -1,4 +1,6 @@
 module MongoWiki
+  
+  # ActiveSupport::Concern which does all the search functionality
   module Search
     extend ActiveSupport::Concern
     
@@ -18,7 +20,8 @@ module MongoWiki
           render :rabl, :'search/articles', :format => params[:format]
         end
       end
-  
+      
+      # search article
       def search!
         query = params[:query]
         @articles = Article.search(query)
@@ -26,5 +29,7 @@ module MongoWiki
       end
     
     end
+    
   end
+
 end

@@ -1,4 +1,7 @@
+# :nodoc:
 module MongoWiki
+  
+  # ActiveSupport::Concern which includes all the actions for articles
   module Articles
     extend ActiveSupport::Concern
   

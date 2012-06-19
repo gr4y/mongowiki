@@ -1,6 +1,8 @@
+# mongoid document
 class Article
   
   include Mongoid::Document
+  include Mongoid::Timestamps
   include Mongoid::Search  
   
   field :title, :type => String
