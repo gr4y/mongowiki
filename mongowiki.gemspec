@@ -19,19 +19,20 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
 
   # development dependencies
-  s.add_development_dependency "rack-test", "~> 0.6.1"
-  s.add_development_dependency "minitest", "~> 2.8.1"
-  s.add_development_dependency "yard", "~> 0.7.3"
+  s.add_development_dependency "rack-test"
+  s.add_development_dependency "minitest"
+  s.add_development_dependency "mongoid-minitest"
+  s.add_development_dependency "yard"
   s.add_development_dependency "unicorn"
   
   # base dependencies
-  s.add_runtime_dependency 'rack', '~> 1.4.1'
-  s.add_runtime_dependency 'rack-contrib', '~> 1.1.0'
-  s.add_runtime_dependency 'rack-cache', '~> 1.1.0'
-  s.add_runtime_dependency 'sinatra', '~> 1.3.2'
-  s.add_runtime_dependency 'sinatra-contrib', '~> 1.3.1'
-  s.add_runtime_dependency 'activesupport', '~> 3.2.0'
-  s.add_runtime_dependency 'yajl-ruby', '~> 1.1.0'
+  s.add_runtime_dependency "rack", "~> 1.4.1"
+  s.add_runtime_dependency "rack-contrib", "~> 1.1.0"
+  s.add_runtime_dependency "rack-cache", "~> 1.1.0"
+  s.add_runtime_dependency "sinatra", "~> 1.3.2"
+  s.add_runtime_dependency "sinatra-contrib", "~> 1.3.1"
+  s.add_runtime_dependency "activesupport", "~> 3.2.0"
+  s.add_runtime_dependency "yajl-ruby", "~> 1.1.0"
   
   # database 
   s.add_runtime_dependency "mongoid", "~> 2.4"
