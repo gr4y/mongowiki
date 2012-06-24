@@ -3,7 +3,7 @@ class Article
   
   include Mongoid::Document
   include Mongoid::Timestamps
-  include Mongoid::Search  
+  include Mongoid::Search
   
   field :title, :type => String
   field :text
