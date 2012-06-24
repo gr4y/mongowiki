@@ -5,15 +5,22 @@ require 'mongoid-minitest'
 require 'mongowiki'
 require 'yaml'
 
-# if the MONGO_URL enviroment variable is not set, 
-# read the url from test/mongodb.yml
-if !ENV['MONGO_URL']
-  if !::File.exists?('test/mongodb.yml') 
-    raise "MONGO_URL environment variable not set and test/mongodb.yml not found"
-  end
-  yaml = YAML::load_file('test/mongodb.yml')
-  Mongoid::Config.from_hash("uri" => yaml['url'])
+ENV['MONGO_URL']='mongodb://localhost/mongowiki_test'
+
+def mongo_url 
+  url = ENV['MONGO_URL']
+  if !url
+    if !::File.exists?('test/mongodb.yml')
+      raise 'MONGO_URL environment variable not set and test/mongodb.yml not found'
+    end
+    yaml = YAML::load_file('test/mongodb.yml')
+    url = yaml['url']
+  end  
+  url
 end
+
+# set mongo_url 
+Mongoid::Config.from_hash("uri" => mongo_url)
 
 # setup DatabaseCleaner
 DatabaseCleaner.strategy = :truncation
