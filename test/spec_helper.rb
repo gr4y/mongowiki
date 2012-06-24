@@ -5,12 +5,14 @@ require 'mongoid-minitest'
 require 'mongowiki'
 require 'yaml'
 
-# if the suite is not running on travis, 
-# read the url to mongodb from test/mongodb.yml 
-if !ENV['TRAVIS']
+# if the MONGO_URL enviroment variable is not set, 
+# read the url from test/mongodb.yml
+if !ENV['MONGO_URL']
+  if !::File.exists?('test/mongodb.yml') 
+    raise "MONGO_URL environment variable not set and test/mongodb.yml not found"
+  end
   yaml = YAML::load_file('test/mongodb.yml')
-  url=yaml['url']
-  Mongoid::Config.from_hash("uri" => url)
+  Mongoid::Config.from_hash("uri" => yaml['url'])
 end
 
 # setup DatabaseCleaner
