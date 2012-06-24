@@ -7,12 +7,10 @@ Gem::Specification.new do |s|
   s.version     = MongoWiki::VERSION
   s.authors     = ["Sascha Wessel"]
   s.email       = ["swessel@gr4yweb.de"]
-  s.homepage    = "http://www.gr4yweb.de/gems/mongowiki"
+  s.homepage    = "http://github.com/gr4y/mongowiki"
   s.summary     = %q{mongowiki is an sinatra-based wiki application, which persists your articles into an mongodb}
   s.description = %q{mongowiki is an sinatra-based wiki application, which persists your articles into an mongodb}
-
-  s.rubyforge_project = "mongowiki"
-
+  
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
@@ -25,6 +23,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency "mongoid-minitest"
   s.add_development_dependency "yard"
   s.add_development_dependency "unicorn"
+  s.add_development_dependency "database_cleaner"
   
   # base dependencies
   s.add_runtime_dependency "rack", "~> 1.4.1"

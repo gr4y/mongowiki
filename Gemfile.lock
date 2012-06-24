@@ -34,6 +34,7 @@ GEM
       bson (~> 1.6.4)
     builder (3.0.0)
     coderay (1.0.6)
+    database_cleaner (0.6.7)
     eventmachine (0.12.10)
     fast-stemmer (1.0.1)
     hike (1.2.1)
@@ -100,6 +101,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  database_cleaner
   minitest
   mongoid-minitest
   mongowiki!
