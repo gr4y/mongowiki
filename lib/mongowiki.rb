@@ -18,6 +18,8 @@ require 'mongowiki/articles'
 require 'mongowiki/search'
 require 'mongowiki/app'
 
+Mongoid.logger.level = 3
+
 module MongoWiki
   
   # 
