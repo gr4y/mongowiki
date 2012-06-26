@@ -6,7 +6,7 @@
 
 - article versioning and locking
 - implement an export and import mechanism for articles into markdown
-- add an markdown editor, maybe [pagedown](pagedown.googlecode.com/)?
+- add an markdown editor, maybe [pagedown](http://pagedown.googlecode.com/)?
 
 ## Enhancements
 
