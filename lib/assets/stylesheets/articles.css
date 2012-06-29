@@ -3,7 +3,8 @@
 }
 
 .article .text,
-ul.articles {
+ul.articles,
+ul.versions {
 	padding: 15px;
 	margin: 5px 0;
 	font-family: "Helvetica Neue", Helvetica, serif;
@@ -50,4 +51,13 @@ ul.articles li.article {
 
 ul.articles li.article a {
 	color: #000;
+}
+
+ul.versions li.version a {
+	text-decoration: none;
+	color: #000;
+}
+
+ul.versions li.version.current {
+	color: #0080FF;
 }
