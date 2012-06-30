@@ -20,6 +20,7 @@ describe Article do
   # check if there's a _keywords field, cause of Mongoid::Search
   it { must have_field(:_keywords) }
   
-  # check if there's a locked field
-#  it { must have_field(:locked).of_type(Boolean) }
+  # check if versioning is embedded
+  it { must embed_many(:versions)}
+
 end
