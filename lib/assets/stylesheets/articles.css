@@ -4,7 +4,8 @@
 
 .article .text,
 ul.articles,
-ul.versions {
+ul.versions,
+.diff {
 	padding: 15px;
 	margin: 5px 0;
 	font-family: "Helvetica Neue", Helvetica, serif;
@@ -60,4 +61,17 @@ ul.versions li.version a {
 
 ul.versions li.version.current {
 	color: #0080FF;
+}
+
+.diff li {
+	margin-bottom: 2px;
+	padding: 2px;
+}
+
+.diff li ins {
+	background: #CDFFCD;
+}
+
+.diff li del {
+	background: #FFCDCD;
 }
