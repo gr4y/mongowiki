@@ -4,9 +4,9 @@ module MongoWiki
   # ActiveSupport::Concern which includes all the actions for articles
   module Articles
     extend ActiveSupport::Concern
-  
+    
     included do 
-          
+      
       get '/' do
         redirect url("/list")
       end   
@@ -20,7 +20,7 @@ module MongoWiki
           erb :error
         end
       end
-    
+      
       get '/show/:id' do 
         begin
           @article = Article.find(params[:id])
@@ -30,12 +30,12 @@ module MongoWiki
           erb :error
         end
       end
-    
+      
       get '/new' do 
         @article = Article.new
         erb :'article/new'
       end
-    
+      
       post '/create' do       
         article = params[:article]
         @article = Article.create(params[:article])
@@ -44,12 +44,12 @@ module MongoWiki
         end
         redirect url("/show/#{@article._id}")
       end    
-
+      
       get '/edit/:id' do 
         @article = Article.find(params[:id])
         erb :'article/edit'
       end
-    
+      
       post '/update/:id' do
         @article = Article.find(params[:id])
         @article.update_attributes(params[:article])
@@ -57,7 +57,7 @@ module MongoWiki
           redirect url("/show/#{@article._id}")
         end
       end
-          
+      
       get '/destroy/:id' do
         @article = Article.find(params[:id])
         if @article.delete
