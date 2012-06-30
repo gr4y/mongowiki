@@ -11,6 +11,7 @@ require 'sprockets'
 require 'sprockets-helpers'
 require 'redcarpet'
 require 'coderay'
+require 'diffy'
 
 require 'mongowiki/models/article'
 require 'mongowiki/helpers'

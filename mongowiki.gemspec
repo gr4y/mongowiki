@@ -46,5 +46,5 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency "sprockets-helpers", "~> 0.3.0"
   s.add_runtime_dependency "sass", "~> 3.1.17"
   s.add_runtime_dependency "rabl", "~> 0.6.10"
-
+  s.add_runtime_dependency "diffy", "~> 2.0.7"
 end
