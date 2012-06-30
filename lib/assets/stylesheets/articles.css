@@ -63,15 +63,15 @@ ul.versions li.version.current {
 	color: #0080FF;
 }
 
-.diff li {
-	margin-bottom: 2px;
-	padding: 2px;
+.compare .current-link::before {
+	content: '<=';
+	color: #666;
 }
 
-.diff li ins {
-	background: #CDFFCD;
+.compare .current-link {
+	margin-top: 10px;
+	display: inline-block;
+	color: black;
+	text-decoration: none;
 }
 
-.diff li del {
-	background: #FFCDCD;
-}

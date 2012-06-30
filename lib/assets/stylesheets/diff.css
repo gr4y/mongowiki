@@ -16,6 +16,12 @@
 	text-decoration: none;
 }
 
+.diff del .symbol, .diff ins .symbol {
+	color: #666;
+	display: inline-block;
+	margin-right: 10px;
+}
+
 .diff li {
 	position: relative;
 	padding: 5px;
