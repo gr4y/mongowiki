@@ -6,11 +6,10 @@ module MongoWiki
     
     included do 
 
-# commented this out, cause sprockets is pucking into the search_spec
-#      post '/search' do
-#        search!
-#        erb :'search/articles'
-#      end
+      post '/search' do
+        search!
+        erb :'search/articles'
+      end
 
       get '/search.:format' do
         format = params[:format]
