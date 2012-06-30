@@ -1,0 +1,7 @@
+<section class="compare">
+	<h2 class="title">diff between latest version and version <%= params[:aVersion] %></h2>
+	<%= @diff.to_s(:html) %>
+	<a href="/show/<%= @article._id %>" class="current-link">
+		back to current version
+	</a>
+</section>

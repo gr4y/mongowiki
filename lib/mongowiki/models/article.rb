@@ -18,4 +18,25 @@ class Article
   validates_uniqueness_of :title
   validates_presence_of :text
   
+  def diff(aVersion)
+    version = get_version(aVersion)
+    if !version.nil? 
+      Diffy::Diff.new(text, version.text, :include_plus_and_minus_in_html => true)
+    else 
+      "the version you want to compare with doesn't exist."
+    end
+  end
+  
+  private 
+  def get_version(aVersion)
+    version = nil
+    versions.each do |v|
+      if v.version.eql?(aVersion)
+        version = v 
+        break
+      end
+    end
+    version
+  end
+  
 end
