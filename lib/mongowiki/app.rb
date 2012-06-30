@@ -10,7 +10,7 @@ module MongoWiki
     
     # sinatra
     set :show_exceptions, true
-  
+    
     # sprockets    
     set :sprockets, Sprockets::Environment.new(root)
     set :assets_prefix, '/' 
@@ -34,17 +34,17 @@ module MongoWiki
       Rabl.register!
       
     end
-
+    
     helpers do 
       include Sprockets::Helpers
       include MongoWiki::Helpers::MessageHelper
       include MongoWiki::Helpers::MarkdownHelper
     end
-
+    
     include Rack::Utils
     include MongoWiki::Articles
     include MongoWiki::Search
-        
+    
     not_found do 
       erb :"404"
     end
