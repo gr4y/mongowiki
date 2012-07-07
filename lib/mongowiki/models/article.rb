@@ -18,12 +18,13 @@ class Article
   validates_uniqueness_of :title
   validates_presence_of :text
   
-  def diff(aVersion)
+  # returns an Diffy::Diff object of the given field 
+  def diff(aVersion, field)
     version = get_version(aVersion)
     if !version.nil? 
-      Diffy::Diff.new(text, version.text, :include_plus_and_minus_in_html => true)
+      Diffy::Diff.new(version[field], self[field], :include_plus_and_minus_in_html => true)
     else 
-      "the version you want to compare with doesn't exist."
+      nil
     end
   end
   

@@ -33,15 +33,14 @@ module MongoWiki
       
       get '/show/:id/diff/:aVersion' do
         begin
+
           aVersion = params[:aVersion].to_i
           @article = Article.find(params[:id])
-          @diff = @article.diff(aVersion)
-          if @diff.is_a?(String)
-            @message = @diff
-            erb :error
-          else
-            erb :'article/diff'
-          end
+
+          @title_diff = @article.diff(aVersion, :title)
+          @text_diff = @article.diff(aVersion, :text)
+          erb :'article/diff'
+
         rescue Mongoid::Errors::DocumentNotFound => e
           @error = e 
           erb :error
