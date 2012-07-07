@@ -1,10 +1,11 @@
 # TODOs
 
 - Tests
+- Refactoring
 
 ## Features 
 
-- article versioning and locking
+- <s>article versioning</s> and locking
 - implement an export and import mechanism for articles into markdown
 - add an markdown editor, maybe [pagedown](http://pagedown.googlecode.com/)?
 
