@@ -24,13 +24,11 @@ Gem::Specification.new do |s|
   s.add_development_dependency "yard"
   s.add_development_dependency "unicorn"
   s.add_development_dependency "database_cleaner"
+
   
   # base dependencies
   s.add_runtime_dependency "rack", "~> 1.4.1"
-  s.add_runtime_dependency "rack-contrib", "~> 1.1.0"
-  s.add_runtime_dependency "rack-cache", "~> 1.1.0"
-  s.add_runtime_dependency "sinatra", "~> 1.3.2"
-  s.add_runtime_dependency "sinatra-contrib", "~> 1.3.1"
+  s.add_runtime_dependency "happy", "~> 0.1.0"
   s.add_runtime_dependency "activesupport", "~> 3.2.0"
   s.add_runtime_dependency "yajl-ruby", "~> 1.1.0"
   

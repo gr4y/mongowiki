@@ -1,0 +1,1 @@
+require 'mongowiki/models/article'

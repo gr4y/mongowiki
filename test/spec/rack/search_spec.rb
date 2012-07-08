@@ -1,11 +1,10 @@
 require 'spec_helper'
-require 'mock/search'
 
 def app
-  MockSearch
+  SearchController
 end
 
-describe "MongoWiki::Search" do
+describe SearchController do
   
   before :each do
     Mongoid::Factory.build(Article, { :title => 'Once upon time', 

@@ -1,23 +1,18 @@
-require 'sinatra'
 require 'mongoid'
 require 'mongoid_search'
-require 'rack/contrib'
-require 'active_support/concern'
 
 require 'erb'
 require 'rabl'
 require 'sass'
-require 'sprockets'
-require 'sprockets-helpers'
+
 require 'redcarpet'
 require 'coderay'
 require 'diffy'
+require 'happy'
 
-require 'mongowiki/models/article'
+require 'mongowiki/models'
 require 'mongowiki/helpers'
-require 'mongowiki/articles'
-require 'mongowiki/search'
-require 'mongowiki/app'
+require 'mongowiki/controllers'
 
 Mongoid.logger.level = 3
 
@@ -29,7 +24,7 @@ module MongoWiki
   # usage:
   # 
   #   MongoWiki.run!
-  class << self 
+  class << self
     
     attr_reader :mongo_uri
     
@@ -51,7 +46,8 @@ module MongoWiki
     # run application
     def run! 
       init!
-      MongoWiki::App.run!
+      Article.index_keywords!
+      Rack::Cascade.new([SearchController, ArticlesController, AssetsController])
     end
     
   end
