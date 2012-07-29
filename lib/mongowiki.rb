@@ -1,55 +1,37 @@
+require 'happy'
 require 'mongoid'
 require 'mongoid_search'
-
-require 'erb'
-require 'rabl'
-require 'sass'
-
 require 'redcarpet'
 require 'coderay'
 require 'diffy'
-require 'happy'
+require 'erb'
+require 'rabl'
+require 'packr'
 
-require 'mongowiki/models'
-require 'mongowiki/helpers'
-require 'mongowiki/controllers'
+PATH = File.join(File.dirname(__FILE__), "mongowiki")
 
-Mongoid.logger.level = 3
+# require the models
+Dir[File.join(PATH, *%w[models ** *.rb])].each do |name|
+  require name
+end
 
-module MongoWiki
+# require initializers first
+Dir[File.join(PATH, *%w[initializers ** *.rb])].each do |name| 
+  require name
+end
+
+Dir[File.join(PATH, *%w[controllers ** *.rb])].each do |name| 
+  require name 
+end
+
+class MongoWiki < Happy::Controller
+   
+  set :views, File.join(PATH, 'views')
   
-  # 
-  # the application
-  #
-  # usage:
-  # 
-  #   MongoWiki.run!
-  class << self
-    
-    attr_reader :mongo_uri
-    
-    # set mongo_uri
-    def mongo_uri=(uri)
-      Mongoid::Config.from_hash("uri" => uri)
-      @@mongo_uri = uri
-    end
-    
-    # init application
-    def init!
-      if mongo_uri = ENV['MONGO_URL'] 
-        self.mongo_uri = mongo_uri 
-      else
-        raise "environment variable MONGO_URL is not set!"
-      end
-    end
-    
-    # run application
-    def run! 
-      init!
-      Article.index_keywords!
-      Rack::Cascade.new([SearchController, ArticlesController, AssetsController])
-    end
-    
+  def route
+    on('assets') { run AssetsController }
+    on('search') { run SearchController }
+    run ArticlesController
   end
-  
+    
 end

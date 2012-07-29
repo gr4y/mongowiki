@@ -1,12 +1,7 @@
 class ArticlesController < Happy::Controller
   
-  set :root, File.expand_path('../..', File.dirname(__FILE__))
-  set :views, File.join(settings[:root], 'views')
-  
-  helpers Helpers
-
   def route
-    layout 'layout.erb'
+    layout 'layouts/default.erb'
 
     on('list') { list_articles }
     
@@ -15,12 +10,12 @@ class ArticlesController < Happy::Controller
     on_post('create') { create_article(params[:article]) }
     
     on('show') do
-      on(':id') do
-        on('/') { show_article(params[:id]) }
-        on('diff') do
-          on(':version') { diff_article(params[:id], params[:version].to_i) }
-        end
-      end
+      on(':id') { show_article(params[:id]) }
+    end
+    
+    on('diff') do 
+      on(':id') { params[:id] }
+      # diff_article(params[:id], params[:version].to_i)
     end
         
     on('edit') do
@@ -33,7 +28,7 @@ class ArticlesController < Happy::Controller
       on(':id') { destroy(params[:id]) }
     end
     
-    redirect! '/list'
+    redirect! 'list'
   end
     
   def list_articles

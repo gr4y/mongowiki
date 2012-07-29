@@ -1,8 +1,8 @@
 class SearchController < Happy::Controller
-  
+    
   def route
     layout false
-    on('search.json') { search(params[:query]) }
+    on('query.json') { search(params[:query]) }
   end
   
   def search(query)
