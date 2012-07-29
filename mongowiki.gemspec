@@ -24,7 +24,6 @@ Gem::Specification.new do |s|
   s.add_development_dependency "yard"
   s.add_development_dependency "unicorn"
   s.add_development_dependency "database_cleaner"
-
   
   # base dependencies
   s.add_runtime_dependency "rack", "~> 1.4.1"
@@ -40,9 +39,7 @@ Gem::Specification.new do |s|
   # frontend / assets
   s.add_runtime_dependency "redcarpet", "~> 2.1.0"
   s.add_runtime_dependency "coderay", "~> 1.0.6"
-  s.add_runtime_dependency "sprockets", "~> 2.1.2"
-  s.add_runtime_dependency "sprockets-helpers", "~> 0.3.0"
-  s.add_runtime_dependency "sass", "~> 3.1.17"
   s.add_runtime_dependency "rabl", "~> 0.6.10"
   s.add_runtime_dependency "diffy", "~> 2.0.7"
+  s.add_runtime_dependency "packr"
 end
