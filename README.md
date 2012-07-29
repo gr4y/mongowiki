@@ -1,10 +1,11 @@
 # mongowiki
 
+[![Build Status](https://secure.travis-ci.org/gr4y/mongowiki.png)](http://travis-ci.org/gr4y/mongowiki)
+[![Dependency Status](https://gemnasium.com/gr4y/mongowiki.png)](http://gemnasium.com/gr4y/mongowiki)
+[![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/gr4y/mongowiki)
+
 mongowiki is an sinatra-based wiki application, which persists your articles into an mongodb
 
-## Travis CI
-
-[![Build Status](https://secure.travis-ci.org/gr4y/mongowiki.png?branch=master)](http://travis-ci.org/gr4y/mongowiki)
 
 ## Installation
 ### stable release
