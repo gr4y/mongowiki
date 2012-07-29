@@ -8,7 +8,8 @@ class MarkdownRenderer < Redcarpet::Render::HTML
   
 end
 
-module Helpers
+# helpers module
+module ArticlesHelper
     
   # render markdown
   def markdown(text)

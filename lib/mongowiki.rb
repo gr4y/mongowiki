@@ -20,6 +20,10 @@ Dir[File.join(PATH, *%w[initializers ** *.rb])].each do |name|
   require name
 end
 
+Dir[File.join(PATH, *%w[helpers ** *.rb])].each do |name| 
+  require name 
+end
+
 Dir[File.join(PATH, *%w[controllers ** *.rb])].each do |name| 
   require name 
 end

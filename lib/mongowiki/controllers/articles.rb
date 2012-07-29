@@ -1,5 +1,7 @@
 class ArticlesController < Happy::Controller
   
+  helpers ArticlesHelper
+  
   def route
     layout 'layouts/default.erb'
 
