@@ -1,36 +1,19 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link rel="stylesheet" href="application.css">
+		<link rel="stylesheet" href="/assets/application.css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 		<script src="/assets/application.js"></script>
 		<title>MongoWiki</title>
 	</head>
 	<body>
-		<div id="wrapper">			
-			<section id="main-bar" class="clearfix">
-				<nav id="navigation" role="navigation" class="left">
-					<ul class="list">
-						<li><a href="<%= current_url('/new') %>" class="button blue" alt="create article">create article</a></li>
-					</ul>
-				</nav>
-				<div id="search" role="search" class="left">
-					<input type="text" name="query" class="query" placeholder="Search..." />
-				</div>
-			</section>
-			
-			<ul class="messages">
-				<% messages.each do |message| %>
-					<li class="message <%= message[:type] %>">
-						<%= message[:text] %>
-					</li>
-				<% end %>
-			</ul>
-			
+		<div id="wrapper">
+			<%= render 'layouts/_header.erb' %>
+			<%= render 'layouts/_navigation.erb' %>
+			<%= render 'layouts/_messages.erb', :messages => messages %>
 			<section id="content" role="content">
 				<%= yield %>
 			</section>
-
 		</div>
 	</body>
 </html>

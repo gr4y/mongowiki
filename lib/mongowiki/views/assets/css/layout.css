@@ -1,0 +1,98 @@
+body {
+	color: #000;
+	background-color: #bccc51;
+}	
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: Georgia, "New Century Schoolbook", "Nimbus Roman No9 L", serif;
+	font-style: italic;
+	font-weight: bold;
+}
+
+h1 { font-size: 1.5em; /* 24px */ }
+h2 { font-size: 1.375em; /* 22px */ }
+h3 { font-size: 1.125em; /* 18px */ }
+h4 { font-size: 1em; /* 16px */ }
+h5 { font-size: 0.875em; /* 14px */ }	
+h6 { font-size: 0.75em; /* 12px */ }
+
+#wrapper { 
+	width: 87.916666666%;
+	margin: 20px auto;
+	padding: 20px 2.083333333%;
+	background: #FFF;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-o-border-radius: 5px;
+}
+
+#wrapper .site-header {
+	padding-bottom: 15px;
+}
+
+#wrapper .site-header .title {
+	width: 62.5%; /* 600px / 918px */
+	display: inline-block;
+}
+
+#wrapper .site-header .title h1 {
+	font-size: 1.5em;
+}
+
+#wrapper .site-header .search {
+	display: inline-block;
+	width: 31.25%; /* 300px / 918px */
+	padding: 5px 1.875%; /* 18px / 918px */
+	border: 1px solid #EAEAEA;
+	background: #F5F5F5;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-o-border-radius: 5px;
+}
+
+#wrapper .site-header .search label {
+	width: 27.950310559%; /* 90px / 322px */
+	display: inline-block;
+	text-align: left;
+	font-style: italic;
+	font-weight: bold;
+	font-size: 1em;
+	color: #333;
+}
+
+#wrapper .site-header .search input {
+	width: 62.111801242%; /* 200px / 322px */
+	display: inline-block;
+	font-size: 0.875em;
+	border-radius: 2px;
+	border: 1px solid #EAEAEA;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-o-border-radius: 2px;
+	-webkit-appearance: none;
+}
+
+#navigation {
+	border-top: 1px dashed #DDD;
+	padding: 10px 0;
+}
+
+#navigation li {
+	display: inline-block;
+}
+
+#content, #navigation {
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
+}
+
+#content {
+	border-top: 1px dashed #DDD;
+	padding-top: 20px;
+	
+}
+
+#content .title {
+	margin-bottom: 30px;
+}

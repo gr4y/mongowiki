@@ -2,12 +2,12 @@ form {
 	width: auto;
 }
 
-form label {
-	width: 50px;
-	max-width: 50px;
+form .control-label {
+	width: 150px;
+	max-width: 150px;
 	display: inline-block;
-	padding: 10px 20px 0 0;
-	text-align: right;
+	padding: 10px 50px 10px 0; 
+	text-align: left;
 	vertical-align: top;
 }
 
@@ -30,20 +30,6 @@ textarea {
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
 	
-	background-image: linear-gradient(bottom, rgb(240,240,240) 100%, rgb(227,227,227) 1%);
-	background-image: -o-linear-gradient(bottom, rgb(240,240,240) 100%, rgb(227,227,227) 1%);
-	background-image: -moz-linear-gradient(bottom, rgb(240,240,240) 100%, rgb(227,227,227) 1%);
-	background-image: -webkit-linear-gradient(bottom, rgb(240,240,240) 100%, rgb(227,227,227) 1%);
-	background-image: -ms-linear-gradient(bottom, rgb(240,240,240) 100%, rgb(227,227,227) 1%);
-
-	background-image: -webkit-gradient(
-		linear,
-		left bottom,
-		left top,
-		color-stop(1, rgb(227,227,227)),
-		color-stop(0.01, rgb(240,240,240))
-	);
-
 	box-shadow: 0 0 3px #DDD inset;
 	-o-box-shadow: 0 0 3px #DDD inset;
 	-moz-box-shadow: 0 0 3px #DDD inset;
@@ -60,7 +46,7 @@ form textarea {
 	height: 300px;
 }
 
-form p {
+form div.control-group {
 	display: block;
-	margin: 10px 	;
+	margin: 10px;
 }

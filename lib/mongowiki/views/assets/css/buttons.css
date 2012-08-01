@@ -5,19 +5,13 @@ input[type='submit'].button {
 .button {
 	display: inline-block;
 	margin: 0;
-	
-	border-radius: 5px;
-	-o-border-radius: 5px;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-
 	color: #FFF;
 	text-decoration: none;
 	text-shadow: #000 1px 1px 0.2em;
-
+	font-size: 0.75em;
 	font-weight: bold;
-	font-size: 12px;	
-	padding: 10px;
+	padding: 10px 20px;
+
 	background-image: linear-gradient(bottom, rgb(187,177,177) 1%, rgb(217,212,212) 100%);
 	background-image: -o-linear-gradient(bottom, rgb(187,177,177) 1%, rgb(217,212,212) 100%);
 	background-image: -moz-linear-gradient(bottom, rgb(187,177,177) 1%, rgb(217,212,212) 100%);
@@ -30,6 +24,11 @@ input[type='submit'].button {
 		color-stop(0.01, rgb(187,177,177)),
 		color-stop(1, rgb(217,212,212))
 	);
+	
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-o-border-radius: 2px;
 	
 	border-top: none;
 	border-left: 1px solid rgb(187,177,177);

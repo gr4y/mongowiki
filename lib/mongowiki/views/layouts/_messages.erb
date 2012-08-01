@@ -1,0 +1,11 @@
+<% if messages %>
+	<section class="messages">
+		<ul>
+			<% messages.each do |message| %>
+				<li class="message <%= message[:type] %>">
+					<%= message[:text] %>
+				</li>
+			<% end %>
+		</ul>
+	</section>
+<% end %>
