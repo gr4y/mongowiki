@@ -5,16 +5,19 @@
 	<div class="text">
 		<%= markdown(@article.text) %>
 	</div>
+
+	<div class="actions">
+		<a href="<%= current_url("edit/#{@article._id}") %>" class="button">edit article</a>
+		<a href="<%= current_url("destroy/#{@article._id}") %>" class="button red">destroy article</a>
+	</div>
 	
+	<!--
 	<h2>versions</h2>
 	<ul class="versions">
 		<% @article.versions.each do |version| %>
 			<%= render 'article/version.erb', :version => version %>
 		<% end %>
 	</ul>
+	-->
 	
-	<div class="actions">
-		<a href="<%= current_url("/edit/#{@article._id}") %>" class="button">edit article</a>
-		<a href="<%= current_url("/destroy/#{@article._id}") %>" class="button red">destroy article</a>
-	</div>
 </div>

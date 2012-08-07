@@ -89,8 +89,17 @@ h6 { font-size: 0.75em; /* 12px */ }
 
 #content {
 	border-top: 1px dashed #DDD;
-	padding-top: 20px;
-	
+	padding-top: 20px;	
+}
+
+#content .text {
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+	border-bottom: 1px dashed #DDD;
+}
+
+#content .text p {
+	margin-bottom: 10px;
 }
 
 #content .title {
