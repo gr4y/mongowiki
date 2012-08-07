@@ -24,7 +24,9 @@ class ArticlesController < Happy::Controller
       on(':id') { edit_article(params[:id]) }
     end
     
-    on_post('update') { update_article(params[:id], params[:article])  }
+    on('update') do 
+      on_post(':id') { update_article(params[:id], params[:article])  }
+    end
     
     on('destroy') do
       on(':id') { destroy(params[:id]) }
@@ -39,7 +41,7 @@ class ArticlesController < Happy::Controller
       render 'article/list.erb'
     else
       @message = "There are no articles yet!"
-      render 'error'
+      render 'error.erb'
     end
   end
   
@@ -73,9 +75,9 @@ class ArticlesController < Happy::Controller
   def create_article(article)
     @article = Article.create(article)
     if !@article.valid?
-      redirect! current_url("/new")
+      redirect! "/new"
     end
-    redirect! current_url("/show/#{@article._id}")
+    redirect! "/show/#{@article._id}"
   end
   
   def edit_article(id)
@@ -87,14 +89,14 @@ class ArticlesController < Happy::Controller
     @article = Article.find(id)
     @article.update_attributes(article)
     if @article.save
-      redirect! current_url("/show/#{@article._id}")
+      redirect! "/show/#{@article._id}"
     end
   end
   
   def destroy(id)
     @article = Article.find(id)
     if @article.delete
-      redirect url("/list")
+      redirect! "/list"
     end
   end
   

@@ -7,8 +7,8 @@
 	</div>
 
 	<div class="actions">
-		<a href="<%= current_url("edit/#{@article._id}") %>" class="button">edit article</a>
-		<a href="<%= current_url("destroy/#{@article._id}") %>" class="button red">destroy article</a>
+		<%= link_to "edit article", "/edit/#{@article._id}", :class => 'button' %>
+		<%= link_to "destroy article", "/destroy/#{@article._id}", :class => 'button red' %>
 	</div>
 	
 	<!--
