@@ -1,5 +1,6 @@
 require 'happy'
 require 'mongoid'
+require 'mongoid-simplify'
 require 'mongoid_search'
 require 'redcarpet'
 require 'coderay'

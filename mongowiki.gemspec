@@ -17,13 +17,13 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
 
   # development dependencies
-  s.add_development_dependency "rake"
-  s.add_development_dependency "rack-test"
-  s.add_development_dependency "minitest"
-  s.add_development_dependency "mongoid-minitest"
-  s.add_development_dependency "yard"
-  s.add_development_dependency "unicorn"
-  s.add_development_dependency "database_cleaner"
+  s.add_development_dependency "rake", "~> 0.9.2.2"
+  s.add_development_dependency "rack-test", "~> 0.6.1"
+  s.add_development_dependency "minitest", "~> 3.3.0"
+  s.add_development_dependency "mongoid-minitest", "~> 0.1.2"
+  s.add_development_dependency "yard", "~> 0.8.2.1"
+  s.add_development_dependency "unicorn", "~> 4.3.1"
+  s.add_development_dependency "database_cleaner", "~> 0.8.0"
   
   # base dependencies
   s.add_runtime_dependency "rack", "~> 1.4.1"
@@ -32,9 +32,10 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency "yajl-ruby", "~> 1.1.0"
   
   # database 
-  s.add_runtime_dependency "mongoid", "~> 2.4"
-  s.add_runtime_dependency "mongoid_search", "~> 0.2.7"
-  s.add_runtime_dependency "bson_ext", "~> 1.5"
+  s.add_runtime_dependency "mongoid", "~> 3.0.5"
+  s.add_runtime_dependency "bson_ext", "~> 1.6.4"
+  s.add_runtime_dependency "mongoid_search", "~> 0.3.0"
+  s.add_runtime_dependency "mongoid-simplify", "~> 0.0.1"
   
   # frontend / assets
   s.add_runtime_dependency "redcarpet", "~> 2.1.0"
