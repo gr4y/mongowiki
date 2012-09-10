@@ -53,7 +53,7 @@ GEM
       minitest (~> 3.3.0)
       minitest-matchers (~> 1.2.0)
       mongoid (~> 3.0.4)
-    mongoid-simplify (0.0.1)
+    mongoid-simplify (0.0.2)
       mongoid (~> 3.0.5)
     mongoid_search (0.3.0)
       fast-stemmer (~> 1.0.0)
