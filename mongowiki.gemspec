@@ -21,7 +21,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency "rack-test", "~> 0.6.1"
   s.add_development_dependency "minitest", "~> 3.3.0"
   s.add_development_dependency "mongoid-minitest", "~> 0.1.2"
-  s.add_development_dependency "yard", "~> 0.8.2.1"
+  s.add_development_dependency "yard", "~> 0.9.20"
   s.add_development_dependency "unicorn", "~> 4.3.1"
   s.add_development_dependency "database_cleaner", "~> 0.8.0"
   
