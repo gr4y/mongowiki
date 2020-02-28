@@ -17,7 +17,7 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
 
   # development dependencies
-  s.add_development_dependency "rake", "~> 0.9.2.2"
+  s.add_development_dependency "rake", "~> 13.0.1"
   s.add_development_dependency "rack-test", "~> 0.6.1"
   s.add_development_dependency "minitest", "~> 3.3.0"
   s.add_development_dependency "mongoid-minitest", "~> 0.1.2"
