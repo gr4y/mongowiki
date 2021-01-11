@@ -38,7 +38,7 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency "mongoid-simplify", "~> 0.0.1"
   
   # frontend / assets
-  s.add_runtime_dependency "redcarpet", "~> 2.1.0"
+  s.add_runtime_dependency "redcarpet", ">= 2.1", "< 3.6"
   s.add_runtime_dependency "coderay", "~> 1.0.6"
   s.add_runtime_dependency "rabl", "~> 0.6.10"
   s.add_runtime_dependency "diffy", "~> 2.0.7"
